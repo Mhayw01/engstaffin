@@ -1,0 +1,127 @@
+.hero-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-1 img,
+.section-2 img,
+.section-3 img,
+.section-4 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper,
+  .section-container,
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4 {
+    padding: 0 16px;
+  }
+
+  .section-1 img,
+  .section-2 img,
+  .section-3 img,
+  .section-4 img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* New text section styling */
+.text-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 0;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.text-section-pretitle {
+  font-size: 16px;
+  font-family: 'Rethink Sans', sans-serif;
+  color: #C25747;
+  margin-bottom: 8px;
+}
+
+.text-section-title {
+  font-size: 28px;
+  font-family: 'Rethink Sans', sans-serif;
+  color: #08302B;
+  margin-bottom: 24px;
+  max-width: 800px;
+  line-height: 1.4;
+}
+
+.text-section-button {
+  background-color: #F0872B;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.64px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.text-section-button:hover {
+  background-color: #d87521;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .text-section {
+    padding: 32px 16px;
+  }
+  .text-section-title {
+    font-size: 24px;
+  }
+  .text-section-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

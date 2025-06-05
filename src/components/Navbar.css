@@ -1,0 +1,136 @@
+/* src/components/Navbar.css */
+
+/* Navbar spans full width, content constrained by .navbar-container */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo on the left */
+.navbar-logo {
+  height: 36px;
+}
+
+/* Left section holds logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Center links (desktop) */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  gap: 32px;
+  white-space: nowrap;
+}
+
+/* Constrain navbar content to match section widths */
+.navbar-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0; /* no side padding on desktop */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Style for each nav link */
+.navbar-center .nav-link {
+  text-decoration: none;
+  color: #172E40;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Rethink Sans', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-center .nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Right section holds button (desktop) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 32px;
+}
+
+/* Contact button */
+.contact-button {
+  background-color: #F0872B;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: 'Rethink Sans', sans-serif;
+  letter-spacing: 0.64px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.contact-button:hover {
+  background-color: #d87521;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-center.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px; /* adjust if navbar height changes */
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+    gap: 16px;
+    z-index: 1000;
+  }
+
+  .navbar-center.open .nav-link,
+  .navbar-center.open .contact-button {
+    padding: 8px 32px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Add side padding on mobile to match sections */
+  .navbar-container {
+    padding: 0 16px;
+  }
+}

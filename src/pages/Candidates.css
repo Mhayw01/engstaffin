@@ -1,0 +1,82 @@
+/* src/pages/Candidates.css */
+
+/* Base section container styling */
+.candidate-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive SVG images */
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Vertical spacing between sections */
+.candidate-section + .candidate-section {
+  margin-top: 24px;
+}
+
+/* Mobile adjustments for very small screens */
+@media (max-width: 480px) {
+  .candidate-section {
+    padding: 0 16px;
+  }
+}
+
+/* New text section styling */
+.candidate-text-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 0;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.candidate-text-pretitle {
+  font-size: 64px;
+  line-height: 64px;
+  font-family: 'Rethink Sans', sans-serif;
+  color: #6B7280;
+  margin-bottom: 24px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.candidate-text-button {
+  background-color: #F0872B;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.64px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.candidate-text-button:hover {
+  background-color: #d87521;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .candidate-text-section {
+    padding: 32px 16px;
+  }
+  .candidate-text-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

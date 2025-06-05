@@ -1,0 +1,32 @@
+
+
+/* src/pages/AboutUs.css */
+
+/* Base section container styling */
+.about-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive SVG images */
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Vertical spacing between sections */
+.about-section + .about-section {
+  margin-top: 24px;
+}
+
+/* Mobile adjustments for very small screens */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 0 16px;
+  }
+}
